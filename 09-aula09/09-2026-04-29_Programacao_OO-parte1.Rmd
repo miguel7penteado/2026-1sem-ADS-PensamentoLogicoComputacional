@@ -4,6 +4,4 @@ output:
     highlight: tango
     theme: cerulean
 ---
-# Tipos de Variáveis
-
-
+# Programação Orientada a Objetos - Parte 1

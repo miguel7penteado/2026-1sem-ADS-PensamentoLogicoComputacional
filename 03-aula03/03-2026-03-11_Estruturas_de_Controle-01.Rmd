@@ -1,7 +1,11 @@
-# Estruturas de Controle - Repetição e Decisão
 ---
 output: 
   html_document: 
     highlight: tango
     theme: cerulean
 ---
+# Estruturas de Controle - Repetição e Decisão
+
+```{r 03-estrutura-controle-repeticao, eval=FALSE, include=FALSE}
+rmarkdown::render("03-2026-03-11_Estruturas_de_Controle-01.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```

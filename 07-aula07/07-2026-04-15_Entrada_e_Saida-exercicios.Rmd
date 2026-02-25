@@ -4,6 +4,5 @@ output:
     highlight: tango
     theme: cerulean
 ---
-# Tipos de Variáveis
-
+## Exercícios de Entrada e Saída
 

@@ -2,34 +2,27 @@ output_dir: "docs"
 book_filename: "2026-1sem-ADS-PensamentoLogicoComputacional"
 delete_merged_file: true
 rmd_files: [
-    "index.Rmd", 
-    "01-aula01/01-2026-02-10_Inaugural.Rmd",
-    "02-aula02/02-2026-02-24_Fubdamentos_SGBD-aula.Rmd",
-    "02-aula02/02-2026-02-24_Fubdamentos_SGBD-exercicio.Rmd",
-    "03-aula03/03-2026-03-03_Modelagem_SGBD-aula-01.Rmd",
-    "03-aula03/03-2026-03-03_Modelagem_SGBD-exercicio-01.Rmd",
-    "04-aula04/04-2026-03-10_Modelagem_SGBD-aula-02.Rmd",
-    "04-aula04/04-2026-03-10_Modelagem_SGBD-exercicio-02.Rmd",
-    "05-aula05/05-2026-03-17_Administracao_Gerenciamento-aula-01.Rmd",
-    "05-aula05/05-2026-03-17_Administracao_Gerenciamento-exercicio-01.Rmd",
-    "06-aula06/06-2026-03-24_Administracao_Gerenciamento-aula-02.Rmd",
-    "06-aula06/06-2026-03-24_Administracao_Gerenciamento-exercicio-02.Rmd",
-    "07-aula07/07-2026-2026-04-07_MySQL-aula.Rmd",
-    "07-aula07/07-2026-2026-04-07_MySQL-exercicio.Rmd",
-    "08-aula08/08-2026-2026-04-14_Postgres-aula.Rmd",
-    "08-aula08/08-2026-2026-04-14_Postgres-exercicio.Rmd",
-    "09-aula09/09-2026-2026-04-21_CRUD-1-aula.Rmd",
-    "09-aula09/09-2026-2026-04-21_CRUD-1-exercicio.Rmd",
-    "10-aula10/10-2026-2026-04-28_CRUD-2-aula.Rmd",
-    "10-aula10/10-2026-2026-04-28_CRUD-2-exercicio.Rmd",
-    "11-aula11/11-2026-2026-05-05_Analise_01-aula.Rmd",
-    "11-aula11/11-2026-2026-05-05_Analise_01-exercicio.Rmd",
-    "12-aula12/12-2026-2026-05-12_Analise_02-aula.Rmd",
-    "12-aula12/12-2026-2026-05-12_Analise_02-exercicio.Rmd",
-    "13-aula13/13-2026-2026-05-26_Analise_03-aula.Rmd",
-    "13-aula13/13-2026-2026-05-26_Analise_03-exercicio.Rmd"
+    "index.Rmd",
+    "01-aula01/01-2026-02-25_Inaugural.Rmd",
+    "02-aula02/02-2026-03-04_Introducao_Logica_Programacao-01-exercicios.Rmd",
+    "02-aula02/02-2026-03-04_Introducao_Logica_Programacao-01.Rmd",
+    "03-aula03/03-2026-03-11_Estruturas_de_Controle-01-exercicios.Rmd",
+    "03-aula03/03-2026-03-11_Estruturas_de_Controle-01.Rmd",
+    "04-aula04/04-2026-03-18_Tipos_De_Variaveis-exercicios.Rmd",
+    "04-aula04/04-2026-03-18_Tipos_De_Variaveis.Rmd",
+    "05-aula05/05-2026-03-25_Procedimentos_e_Funcoes-exercicios.Rmd",
+    "05-aula05/05-2026-03-25_Procedimentos_e_Funcoes.Rmd",
+    "06-aula06/06-2026-04-08_Listas_e_Dicionarios-exercicios.Rmd",
+    "06-aula06/06-2026-04-08_Listas_e_Dicionarios.Rmd",
+    "07-aula07/07-2026-04-15_Entrada_e_Saida-exercicios.Rmd",
+    "08-aula08/08-2026-04-22_Depuracao_e_Teste_Algoritmos-exercicios.Rmd",
+    "08-aula08/08-2026-04-22_Depuracao_e_Teste_Algoritmos.Rmd",
+    "09-aula09/09-2026-04-29_Programacao_OO-parte1-exercicios.Rmd",
+    "09-aula09/09-2026-04-29_Programacao_OO-parte1.Rmd",
+    "10-aula10/10-2026-05-06_Programacao_OO-parte2-exercicios.Rmd",
+    "11-aula11/11-2026-05-13_Programacao_Orientada_Eventos1.Rmd"
 ]
 
 language:
   ui:
-    chapter_name: "Slide "
+    chapter_name: "Aula "

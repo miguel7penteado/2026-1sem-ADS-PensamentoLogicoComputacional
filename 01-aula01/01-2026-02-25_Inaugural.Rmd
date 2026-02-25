@@ -1,7 +1,12 @@
-# Aula Inaugural
 ---
 output: 
   html_document: 
     highlight: tango
     theme: cerulean
 ---
+# Aula Inaugural
+
+
+```{r aula-inaugural-01, eval=FALSE, include=FALSE}
+rmarkdown::render("01-2026-02-25_Inaugural.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```

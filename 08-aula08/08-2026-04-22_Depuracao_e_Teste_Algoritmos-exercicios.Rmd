@@ -4,6 +4,4 @@ output:
     highlight: tango
     theme: cerulean
 ---
-# Tipos de Variáveis
-
-
+## Exercícios de Depuração e Teste de Algorimos

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula</title>
+  <meta name="description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Pensamento Computacional - Ênfase em Python, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="generator" content="bookdown 0.46.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
+  <meta property="og:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Pensamento Computacional - Ênfase em Python, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="github-repo" content="miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula" />
+  
+  <meta name="twitter:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Pensamento Computacional - Ênfase em Python, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="twitter:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
+
+<meta name="author" content="Professor Miguél Suares" />
+
+
+<meta name="date" content="2026-02-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="aula-inaugural.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">2026-ADS- Disciplina de Pensamento Computacional - Ênfase em Python</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Sobre estas anotações</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acesso-ao-gitbook-celular"><i class="fa fa-check"></i><b>0.1</b> ACESSO AO GITBOOK CELULAR</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#leitores-de-formato-de-arquivo-epub-para-smartphone"><i class="fa fa-check"></i><b>0.2</b> Leitores de formato de arquivo EPUB para SmartPhone</a>
+<ul>
+<li class="chapter" data-level="0.2.1" data-path="index.html"><a href="index.html#android"><i class="fa fa-check"></i><b>0.2.1</b> ANDROID</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#livros-texto-da-disciplina"><i class="fa fa-check"></i><b>0.3</b> Livros Texto da Disciplina</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#fundamentos-matem%C3%A1ticos-para-a-ci%C3%AAncia-da-computa%C3%A7%C3%A3o-matem%C3%A1tica-discreta-e-suas-aplica%C3%A7%C3%B5es-da-autora-judith-l.-gersting"><i class="fa fa-check"></i><b>0.3.1</b> “Fundamentos matemáticos para a ciência da computação Matemática Discreta e Suas Aplicações” da autora “<strong>Judith L. Gersting</strong>”</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#calend%C3%A1rio-das-aulas"><i class="fa fa-check"></i><b>0.4</b> Calendário das aulas</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#fevereiro-de-2026"><i class="fa fa-check"></i><b>0.5</b> Fevereiro de 2026</a></li>
+<li class="chapter" data-level="0.6" data-path="index.html"><a href="index.html#mar%C3%A7o-de-2026"><i class="fa fa-check"></i><b>0.6</b> Março de 2026</a></li>
+<li class="chapter" data-level="0.7" data-path="index.html"><a href="index.html#abril-de-2026"><i class="fa fa-check"></i><b>0.7</b> Abril de 2026</a></li>
+<li class="chapter" data-level="0.8" data-path="index.html"><a href="index.html#maio-de-2026"><i class="fa fa-check"></i><b>0.8</b> Maio de 2026</a></li>
+<li class="chapter" data-level="0.9" data-path="index.html"><a href="index.html#junho-de-2026"><i class="fa fa-check"></i><b>0.9</b> Junho de 2026</a></li>
+<li class="chapter" data-level="0.10" data-path="index.html"><a href="index.html#alunos-2026---1o-semestre"><i class="fa fa-check"></i><b>0.10</b> Alunos 2026 - 1o Semestre</a>
+<ul>
+<li class="chapter" data-level="0.10.1" data-path="index.html"><a href="index.html#campus-ch%C3%A1cara-santo-ant%C3%B4nio"><i class="fa fa-check"></i><b>0.10.1</b> Campus Chácara Santo Antônio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="aula-inaugural.html"><a href="aula-inaugural.html"><i class="fa fa-check"></i><b>1</b> Aula Inaugural</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="aula-inaugural.html"><a href="aula-inaugural.html#exerc%C3%ADcios-de-introdu%C3%A7%C3%A3o-a-l%C3%B3gica-de-programa%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>1.1</b> Exercícios de Introdução a Lógica de Programação</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introdução-a-lógica-de-programação.html"><a href="introdução-a-lógica-de-programação.html"><i class="fa fa-check"></i><b>2</b> Introdução a Lógica de Programação</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introdução-a-lógica-de-programação.html"><a href="introdução-a-lógica-de-programação.html#exerc%C3%ADcios-de-estruturas-de-controle---repeti%C3%A7%C3%A3o-e-decis%C3%A3o"><i class="fa fa-check"></i><b>2.1</b> Exercícios de Estruturas de Controle - Repetição e Decisão</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="estruturas-de-controle---repetição-e-decisão.html"><a href="estruturas-de-controle---repetição-e-decisão.html"><i class="fa fa-check"></i><b>3</b> Estruturas de Controle - Repetição e Decisão</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="estruturas-de-controle---repetição-e-decisão.html"><a href="estruturas-de-controle---repetição-e-decisão.html#exerc%C3%ADcios-de-tipos-de-vari%C3%A1veis"><i class="fa fa-check"></i><b>3.1</b> Exercícios de Tipos de Variáveis</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tipos-de-variáveis.html"><a href="tipos-de-variáveis.html"><i class="fa fa-check"></i><b>4</b> Tipos de Variáveis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tipos-de-variáveis.html"><a href="tipos-de-variáveis.html#exerc%C3%ADcios-de-procedimentos-e-fun%C3%A7%C3%B5es"><i class="fa fa-check"></i><b>4.1</b> Exercícios de Procedimentos e Funções</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="procedimentos-e-funções.html"><a href="procedimentos-e-funções.html"><i class="fa fa-check"></i><b>5</b> Procedimentos e Funções</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="procedimentos-e-funções.html"><a href="procedimentos-e-funções.html#exerc%C3%ADcios-de-listas-e-dicion%C3%A1rios"><i class="fa fa-check"></i><b>5.1</b> Exercícios de Listas e Dicionários</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="listas-e-dicionários.html"><a href="listas-e-dicionários.html"><i class="fa fa-check"></i><b>6</b> Listas e Dicionários</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="listas-e-dicionários.html"><a href="listas-e-dicionários.html#exerc%C3%ADcios-de-entrada-e-sa%C3%ADda"><i class="fa fa-check"></i><b>6.1</b> Exercícios de Entrada e Saída</a></li>
+<li class="chapter" data-level="6.2" data-path="listas-e-dicionários.html"><a href="listas-e-dicionários.html#exerc%C3%ADcios-de-depura%C3%A7%C3%A3o-e-teste-de-algorimos"><i class="fa fa-check"></i><b>6.2</b> Exercícios de Depuração e Teste de Algorimos</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="depuração-e-teste-de-algorimos.html"><a href="depuração-e-teste-de-algorimos.html"><i class="fa fa-check"></i><b>7</b> Depuração e Teste de Algorimos</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="depuração-e-teste-de-algorimos.html"><a href="depuração-e-teste-de-algorimos.html#exerc%C3%ADcios-de-programa%C3%A7%C3%A3o-orientada-a-objetos---parte-1"><i class="fa fa-check"></i><b>7.1</b> Exercícios de Programação Orientada a Objetos - Parte 1</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="programação-orientada-a-objetos---parte-1.html"><a href="programação-orientada-a-objetos---parte-1.html"><i class="fa fa-check"></i><b>8</b> Programação Orientada a Objetos - Parte 1</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="programação-orientada-a-objetos---parte-1.html"><a href="programação-orientada-a-objetos---parte-1.html#exerc%C3%ADcios-de-programa%C3%A7%C3%A3o-orientada-a-objetos---parte-2"><i class="fa fa-check"></i><b>8.1</b> Exercícios de Programação Orientada a Objetos - Parte 2</a></li>
+<li class="chapter" data-level="8.2" data-path="programação-orientada-a-objetos---parte-1.html"><a href="programação-orientada-a-objetos---parte-1.html#programa%C3%A7%C3%A3o-orientada-a-eventos---graphical-user-interfaces"><i class="fa fa-check"></i><b>8.2</b> # Programação Orientada a Eventos - Graphical User Interfaces</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com Biblioteca R bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula</h1>
+<p class="author"><em>Professor Miguél Suares</em></p>
+<p class="date"><em>2026-02-25</em></p>
+</div>
+<div id="sobre-estas-anotações" class="section level1 unnumbered hasAnchor">
+<h1>Sobre estas anotações<a href="index.html#sobre-estas-anota%C3%A7%C3%B5es" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>—————————————————————————————————————————————</p>
+<p>Estas anotações são apenas lembretes das aulas expostas em sala, durante a disciplina de Banco de dados.</p>
+<div id="acesso-ao-gitbook-celular" class="section level2 hasAnchor" number="0.1">
+<h2><span class="header-section-number">0.1</span> ACESSO AO GITBOOK CELULAR<a href="index.html#acesso-ao-gitbook-celular" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<div id="httpsgithub.commiguel7penteado2026-1sem-ads-pensamentologicocomputacional" class="section level4 hasAnchor" number="0.1.0.1">
+<h4><span class="header-section-number">0.1.0.1</span> <a href="https://github.com/miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional" class="uri">https://github.com/miguel7penteado/2026-1sem-ADS-</a><a href="https://github.com/miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional" class="uri">PensamentoLogicoComputacional</a><a href="index.html#httpsgithub.commiguel7penteado2026-1sem-ads-pensamentologicocomputacional" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><a href="https://github.com/miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional"><img src="01-aula01/media/02-endereco-site-disciplina.jpg" width="534" alt="Endereço do Site da Disciplina no GITHUB" /></a></p>
+</div>
+</div>
+<div id="leitores-de-formato-de-arquivo-epub-para-smartphone" class="section level2 hasAnchor" number="0.2">
+<h2><span class="header-section-number">0.2</span> Leitores de formato de arquivo EPUB para SmartPhone<a href="index.html#leitores-de-formato-de-arquivo-epub-para-smartphone" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<div id="android" class="section level3 hasAnchor" number="0.2.1">
+<h3><span class="header-section-number">0.2.1</span> ANDROID<a href="index.html#android" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="moon-reader" class="section level4 hasAnchor" number="0.2.1.1">
+<h4><span class="header-section-number">0.2.1.1</span> <strong>Moon+ Reader</strong><a href="index.html#moon-reader" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><a href="https://play.google.com/store/apps/details?id=com.flyersoft.moonreader"><img src="01-aula01/media/03-endereco-moon-reader-plus.jpg" alt="Endereço app leitor Moon Reader Plus para ANDROID" /></a></p>
+</div>
+</div>
+</div>
+<div id="livros-texto-da-disciplina" class="section level2 hasAnchor" number="0.3">
+<h2><span class="header-section-number">0.3</span> Livros Texto da Disciplina<a href="index.html#livros-texto-da-disciplina" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<div id="fundamentos-matemáticos-para-a-ciência-da-computação-matemática-discreta-e-suas-aplicações-da-autora-judith-l.-gersting" class="section level3 hasAnchor" number="0.3.1">
+<h3><span class="header-section-number">0.3.1</span> <a href="https://www.kufunda.net/publicdocs/Fundamentos%20matem%C3%A1ticos%20para%20a%20ci%C3%AAncia%20da%20computa%C3%A7%C3%A3o%20Matem%C3%A1tica%20Discreta%20e%20Suas%20Aplica%C3%A7%C3%B5es%20(Judith%20L.%20Gersting).pdf">“Fundamentos matemáticos para a ciência da computação Matemática Discreta e Suas Aplicações” da autora “<strong>Judith L. Gersting</strong>”</a><a href="index.html#fundamentos-matem%C3%A1ticos-para-a-ci%C3%AAncia-da-computa%C3%A7%C3%A3o-matem%C3%A1tica-discreta-e-suas-aplica%C3%A7%C3%B5es-da-autora-judith-l.-gersting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="49%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.kufunda.net/publicdocs/Fundamentos%20matem%C3%A1ticos%20para%20a%20ci%C3%AAncia%20da%20computa%C3%A7%C3%A3o%20Matem%C3%A1tica%20Discreta%20e%20Suas%20Aplica%C3%A7%C3%B5es%20(Judith%20L.%20Gersting).pdf"><img src="01-aula01/media/livro0-Judith_Gersting.jpg" alt="Fundamentos matemáticos para a ciência da computação Matemática Discreta e Suas Aplicações" /></a></td>
+<td><a href="https://www.kufunda.net/publicdocs/Fundamentos%20matem%C3%A1ticos%20para%20a%20ci%C3%AAncia%20da%20computa%C3%A7%C3%A3o%20Matem%C3%A1tica%20Discreta%20e%20Suas%20Aplica%C3%A7%C3%B5es%20(Judith%20L.%20Gersting).pdf"><img src="01-aula01/media/livro-judith_Gersting.jpg" alt="Fundamentos matemáticos para a ciência da computação Matemática Discreta e Suas Aplicações" /></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="22%" />
+<col width="77%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Autor(es)</strong></td>
+<td><h3 id="judith-l.-gersting" class="hasAnchor"><a href="https://en.wikipedia.org/wiki/Christopher_J._Date"><strong>Judith L. Gersting</strong></a><a href="index.html#judith-l.-gersting" class="anchor-section" aria-label="Anchor link to header"></a></h3></td>
+</tr>
+<tr class="even">
+<td><strong>Editora</strong></td>
+<td>LTC</td>
+</tr>
+<tr class="odd">
+<td><strong>Idioma</strong></td>
+<td>Português</td>
+</tr>
+<tr class="even">
+<td><strong>ISBN</strong></td>
+<td>978-8521632597</td>
+</tr>
+<tr class="odd">
+<td><strong>Formato</strong></td>
+<td>Capa dura</td>
+</tr>
+<tr class="even">
+<td><strong>Páginas</strong></td>
+<td>749</td>
+</tr>
+<tr class="odd">
+<td><strong>Código Biblioteca</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="calendário-das-aulas" class="section level2 hasAnchor" number="0.4">
+<h2><span class="header-section-number">0.4</span> Calendário das aulas<a href="index.html#calend%C3%A1rio-das-aulas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="fevereiro-de-2026" class="section level2 hasAnchor" number="0.5">
+<h2><span class="header-section-number">0.5</span> Fevereiro de 2026<a href="index.html#fevereiro-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<table style="width:97%;">
+<colgroup>
+<col width="17%" />
+<col width="21%" />
+<col width="17%" />
+<col width="40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>25/02/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 1</td>
+<td>Aula Inaugural</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="março-de-2026" class="section level2 hasAnchor" number="0.6">
+<h2><span class="header-section-number">0.6</span> Março de 2026<a href="index.html#mar%C3%A7o-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<table style="width:98%;">
+<colgroup>
+<col width="14%" />
+<col width="17%" />
+<col width="13%" />
+<col width="53%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>04/03/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 2</td>
+<td><strong>Introdução à Lógica de Programação - 01</strong> |</td>
+</tr>
+<tr class="even">
+<td>11/03/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 3</td>
+<td><strong>Estruturas de Controle - 02</strong></td>
+</tr>
+<tr class="odd">
+<td>18/03/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 4</td>
+<td><strong>Tipos de Variáveis</strong></td>
+</tr>
+<tr class="even">
+<td>25/03/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 5</td>
+<td><strong>Procedimentos e Funções</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="abril-de-2026" class="section level2 hasAnchor" number="0.7">
+<h2><span class="header-section-number">0.7</span> Abril de 2026<a href="index.html#abril-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<table style="width:98%;">
+<colgroup>
+<col width="14%" />
+<col width="17%" />
+<col width="13%" />
+<col width="52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01/04/2026</td>
+<td>Quarta-Feira</td>
+<td>NP1</td>
+<td><strong>PROVA</strong></td>
+</tr>
+<tr class="even">
+<td>08/04/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 6</td>
+<td><strong>Listas e Dicionários</strong></td>
+</tr>
+<tr class="odd">
+<td>15/04/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 7</td>
+<td><strong>Entrada e Saída</strong></td>
+</tr>
+<tr class="even">
+<td>22/04/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 8</td>
+<td><strong>Depuração e Teste de Algoritmos</strong></td>
+</tr>
+<tr class="odd">
+<td>29/04/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 9</td>
+<td><strong>Programação Orientada a Objetos – Parte 1</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="maio-de-2026" class="section level2 hasAnchor" number="0.8">
+<h2><span class="header-section-number">0.8</span> Maio de 2026<a href="index.html#maio-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<table style="width:98%;">
+<colgroup>
+<col width="14%" />
+<col width="17%" />
+<col width="13%" />
+<col width="52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>06/05/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 10</td>
+<td><strong>Programação Orientada a Objetos – Parte 2</strong></td>
+</tr>
+<tr class="even">
+<td>13/05/2026</td>
+<td>Quarta-Feira</td>
+<td>Aula 11</td>
+<td><strong>Programação Orientada a Eventos – Parte 1</strong></td>
+</tr>
+<tr class="odd">
+<td>20/05/2026</td>
+<td>Quarta-Feira</td>
+<td>NP2</td>
+<td><strong>PROVA</strong></td>
+</tr>
+<tr class="even">
+<td>27/05/2026</td>
+<td>Quarta-Feira</td>
+<td>SUB</td>
+<td><strong>PROVA SUBSTITUTIVA</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="junho-de-2026" class="section level2 hasAnchor" number="0.9">
+<h2><span class="header-section-number">0.9</span> Junho de 2026<a href="index.html#junho-de-2026" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<table style="width:96%;">
+<colgroup>
+<col width="15%" />
+<col width="18%" />
+<col width="11%" />
+<col width="38%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data</th>
+<th>Dia da Semana</th>
+<th>Aulas</th>
+<th>Conteúdo</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10/06/2026</td>
+<td>Quarta-Feira</td>
+<td>EXA</td>
+<td><strong>EXAME – PROVA SUBSTITUTIVA</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="alunos-2026---1o-semestre" class="section level2 hasAnchor" number="0.10">
+<h2><span class="header-section-number">0.10</span> Alunos 2026 - 1o Semestre<a href="index.html#alunos-2026---1o-semestre" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>—————————————————————————————————————————————</p>
+<div id="campus-chácara-santo-antônio" class="section level3 hasAnchor" number="0.10.1">
+<h3><span class="header-section-number">0.10.1</span> Campus Chácara Santo Antônio<a href="index.html#campus-ch%C3%A1cara-santo-ant%C3%B4nio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="aula-inaugural.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional/edit/main/index.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["2026-1sem-ADS-PensamentoLogicoComputacional.pdf", "2026-1sem-ADS-PensamentoLogicoComputacional.epub", "2026-1sem-ADS-PensamentoLogicoComputacional.word", "2026-1sem-ADS-PensamentoLogicoComputacional.html"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+Atributo1;Dependência Funcional;Atributo2;Resultado
+ID_Aluno;determina; Nome_Aluno;?
+Cod_Curso; determina; Nome_Curso;?
+Cod_Curso; determina; ID_Instrutor;?
+ID_Aluno; determina; Nota_Final;?
+
+

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Aula 2 Introdução a Lógica de Programação | ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula</title>
+  <meta name="description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Pensamento Computacional - Ênfase em Python, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="generator" content="bookdown 0.46.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Aula 2 Introdução a Lógica de Programação | ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
+  <meta property="og:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Pensamento Computacional - Ênfase em Python, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="github-repo" content="miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Aula 2 Introdução a Lógica de Programação | ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula" />
+  
+  <meta name="twitter:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Pensamento Computacional - Ênfase em Python, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="twitter:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
+
+<meta name="author" content="Professor Miguél Suares" />
+
+
+<meta name="date" content="2026-02-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="aula-inaugural.html"/>
+<link rel="next" href="estruturas-de-controle---repetição-e-decisão.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">2026-ADS- Disciplina de Pensamento Computacional - Ênfase em Python</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Sobre estas anotações</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acesso-ao-gitbook-celular"><i class="fa fa-check"></i><b>0.1</b> ACESSO AO GITBOOK CELULAR</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#leitores-de-formato-de-arquivo-epub-para-smartphone"><i class="fa fa-check"></i><b>0.2</b> Leitores de formato de arquivo EPUB para SmartPhone</a>
+<ul>
+<li class="chapter" data-level="0.2.1" data-path="index.html"><a href="index.html#android"><i class="fa fa-check"></i><b>0.2.1</b> ANDROID</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#livros-texto-da-disciplina"><i class="fa fa-check"></i><b>0.3</b> Livros Texto da Disciplina</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#fundamentos-matem%C3%A1ticos-para-a-ci%C3%AAncia-da-computa%C3%A7%C3%A3o-matem%C3%A1tica-discreta-e-suas-aplica%C3%A7%C3%B5es-da-autora-judith-l.-gersting"><i class="fa fa-check"></i><b>0.3.1</b> “Fundamentos matemáticos para a ciência da computação Matemática Discreta e Suas Aplicações” da autora “<strong>Judith L. Gersting</strong>”</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#calend%C3%A1rio-das-aulas"><i class="fa fa-check"></i><b>0.4</b> Calendário das aulas</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#fevereiro-de-2026"><i class="fa fa-check"></i><b>0.5</b> Fevereiro de 2026</a></li>
+<li class="chapter" data-level="0.6" data-path="index.html"><a href="index.html#mar%C3%A7o-de-2026"><i class="fa fa-check"></i><b>0.6</b> Março de 2026</a></li>
+<li class="chapter" data-level="0.7" data-path="index.html"><a href="index.html#abril-de-2026"><i class="fa fa-check"></i><b>0.7</b> Abril de 2026</a></li>
+<li class="chapter" data-level="0.8" data-path="index.html"><a href="index.html#maio-de-2026"><i class="fa fa-check"></i><b>0.8</b> Maio de 2026</a></li>
+<li class="chapter" data-level="0.9" data-path="index.html"><a href="index.html#junho-de-2026"><i class="fa fa-check"></i><b>0.9</b> Junho de 2026</a></li>
+<li class="chapter" data-level="0.10" data-path="index.html"><a href="index.html#alunos-2026---1o-semestre"><i class="fa fa-check"></i><b>0.10</b> Alunos 2026 - 1o Semestre</a>
+<ul>
+<li class="chapter" data-level="0.10.1" data-path="index.html"><a href="index.html#campus-ch%C3%A1cara-santo-ant%C3%B4nio"><i class="fa fa-check"></i><b>0.10.1</b> Campus Chácara Santo Antônio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="aula-inaugural.html"><a href="aula-inaugural.html"><i class="fa fa-check"></i><b>1</b> Aula Inaugural</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="aula-inaugural.html"><a href="aula-inaugural.html#exerc%C3%ADcios-de-introdu%C3%A7%C3%A3o-a-l%C3%B3gica-de-programa%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>1.1</b> Exercícios de Introdução a Lógica de Programação</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introdução-a-lógica-de-programação.html"><a href="introdução-a-lógica-de-programação.html"><i class="fa fa-check"></i><b>2</b> Introdução a Lógica de Programação</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introdução-a-lógica-de-programação.html"><a href="introdução-a-lógica-de-programação.html#exerc%C3%ADcios-de-estruturas-de-controle---repeti%C3%A7%C3%A3o-e-decis%C3%A3o"><i class="fa fa-check"></i><b>2.1</b> Exercícios de Estruturas de Controle - Repetição e Decisão</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="estruturas-de-controle---repetição-e-decisão.html"><a href="estruturas-de-controle---repetição-e-decisão.html"><i class="fa fa-check"></i><b>3</b> Estruturas de Controle - Repetição e Decisão</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="estruturas-de-controle---repetição-e-decisão.html"><a href="estruturas-de-controle---repetição-e-decisão.html#exerc%C3%ADcios-de-tipos-de-vari%C3%A1veis"><i class="fa fa-check"></i><b>3.1</b> Exercícios de Tipos de Variáveis</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tipos-de-variáveis.html"><a href="tipos-de-variáveis.html"><i class="fa fa-check"></i><b>4</b> Tipos de Variáveis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tipos-de-variáveis.html"><a href="tipos-de-variáveis.html#exerc%C3%ADcios-de-procedimentos-e-fun%C3%A7%C3%B5es"><i class="fa fa-check"></i><b>4.1</b> Exercícios de Procedimentos e Funções</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="procedimentos-e-funções.html"><a href="procedimentos-e-funções.html"><i class="fa fa-check"></i><b>5</b> Procedimentos e Funções</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="procedimentos-e-funções.html"><a href="procedimentos-e-funções.html#exerc%C3%ADcios-de-listas-e-dicion%C3%A1rios"><i class="fa fa-check"></i><b>5.1</b> Exercícios de Listas e Dicionários</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="listas-e-dicionários.html"><a href="listas-e-dicionários.html"><i class="fa fa-check"></i><b>6</b> Listas e Dicionários</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="listas-e-dicionários.html"><a href="listas-e-dicionários.html#exerc%C3%ADcios-de-entrada-e-sa%C3%ADda"><i class="fa fa-check"></i><b>6.1</b> Exercícios de Entrada e Saída</a></li>
+<li class="chapter" data-level="6.2" data-path="listas-e-dicionários.html"><a href="listas-e-dicionários.html#exerc%C3%ADcios-de-depura%C3%A7%C3%A3o-e-teste-de-algorimos"><i class="fa fa-check"></i><b>6.2</b> Exercícios de Depuração e Teste de Algorimos</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="depuração-e-teste-de-algorimos.html"><a href="depuração-e-teste-de-algorimos.html"><i class="fa fa-check"></i><b>7</b> Depuração e Teste de Algorimos</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="depuração-e-teste-de-algorimos.html"><a href="depuração-e-teste-de-algorimos.html#exerc%C3%ADcios-de-programa%C3%A7%C3%A3o-orientada-a-objetos---parte-1"><i class="fa fa-check"></i><b>7.1</b> Exercícios de Programação Orientada a Objetos - Parte 1</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="programação-orientada-a-objetos---parte-1.html"><a href="programação-orientada-a-objetos---parte-1.html"><i class="fa fa-check"></i><b>8</b> Programação Orientada a Objetos - Parte 1</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="programação-orientada-a-objetos---parte-1.html"><a href="programação-orientada-a-objetos---parte-1.html#exerc%C3%ADcios-de-programa%C3%A7%C3%A3o-orientada-a-objetos---parte-2"><i class="fa fa-check"></i><b>8.1</b> Exercícios de Programação Orientada a Objetos - Parte 2</a></li>
+<li class="chapter" data-level="8.2" data-path="programação-orientada-a-objetos---parte-1.html"><a href="programação-orientada-a-objetos---parte-1.html#programa%C3%A7%C3%A3o-orientada-a-eventos---graphical-user-interfaces"><i class="fa fa-check"></i><b>8.2</b> # Programação Orientada a Eventos - Graphical User Interfaces</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com Biblioteca R bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introdução-a-lógica-de-programação" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Aula 2</span> Introdução a Lógica de Programação<a href="introdução-a-lógica-de-programação.html#introdu%C3%A7%C3%A3o-a-l%C3%B3gica-de-programa%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+
+<div id="exercícios-de-estruturas-de-controle---repetição-e-decisão" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Exercícios de Estruturas de Controle - Repetição e Decisão<a href="introdução-a-lógica-de-programação.html#exerc%C3%ADcios-de-estruturas-de-controle---repeti%C3%A7%C3%A3o-e-decis%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="aula-inaugural.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estruturas-de-controle---repetição-e-decisão.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional/edit/main/02-aula02/02-2026-03-04_Introducao_Logica_Programacao-01.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["2026-1sem-ADS-PensamentoLogicoComputacional.pdf", "2026-1sem-ADS-PensamentoLogicoComputacional.epub", "2026-1sem-ADS-PensamentoLogicoComputacional.word", "2026-1sem-ADS-PensamentoLogicoComputacional.html"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
