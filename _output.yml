@@ -1,0 +1,51 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li><a href="./">2026-ADS- Disciplina de Pensamento Computacional - Ênfase em Python</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com Biblioteca R bookdown</a></li>
+    edit: https://github.com/miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional/edit/main/%s
+    download: ["pdf", "epub", "word", "html"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  geometry: "a4paper,margin=2cm"
+  lua-filter: unnested-table.lua
+bookdown::epub_book:
+  fig_width: 5
+  fig_height: 4
+  dev: "png"
+  fig_caption: TRUE
+  number_sections: TRUE
+  toc: FALSE
+  toc_depth: 3
+  stylesheet: NULL
+  cover_image: NULL
+  metadata: NULL
+  chapter_level: 1
+  epub_version: "epub3"
+  md_extensions: NULL
+  #global_numbering: !number_sections
+  pandoc_args: NULL
+  template: "default"
+bookdown::word_document2:
+  toc: true
+  template: "default"
+bookdown::html_document2:
+  toc: true
+  toc_depth: 3
+  template: "default"
+revealjs::revealjs_presentation:
+  self_contained: false
+  reveal_plugins: ["chalkboard", "menu"]
+  reveal_options:
+    chalkboard:
+        theme: whiteboard
+        toggleNotesButton: false
+    menu:
+        side: right

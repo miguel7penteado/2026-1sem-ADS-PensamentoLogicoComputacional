@@ -1,0 +1,247 @@
+---
+title: "ADS - Pensamento Lógico Computacional - Ênfase em Python - 2026 - Anotações de aula"
+author: "Professor Miguél Suares"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+url: your book url like https://bookdown.org/yihui/bookdown
+cover-image: images/cover.jpg
+description: |
+  Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da  disciplina Pensamento Computacional - Ênfase em Python, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas.
+link-citations: yes
+github-repo: miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plantuml)
+
+
+# Detectar o sistema operacional
+so <- Sys.info()[["sysname"]]
+
+if (so == "Linux")
+{
+  plantumlOptions(jar_path = "/usr/share/java/plantuml.jar")  
+}else 
+  if (so == "Windows") 
+  {
+    plantumlOptions(jar_path = "C:/PROGRA~1/COMMON~1/Oracle/Java/libs/plantuml-1.2025.4.jar")
+  }else
+  {
+    print(paste("Sistema não reconhecido:", so))
+  }
+
+
+knitr::knit_engines$set(plantuml = function(options)
+{
+    code <- paste(options$code, collapse = "\n")
+  
+  if (is.null(options$plantuml.path)) 
+  {
+    path <-  "."
+  } else
+    {
+      path <- options$plantuml.path
+    }
+  
+  dir.create(path, showWarnings = FALSE, recursive = TRUE)
+  fig <- paste0(options$label, ".", "svg")
+  fig <- file.path(path, fig)
+  if (options$eval) plot(x = plantuml(code), vector=FALSE, file=fig)
+  knitr::engine_output(options, out = list(knitr::include_graphics(fig)))
+})
+```
+
+# Sobre estas anotações {.unnumbered}
+
+—————————————————————————————————————————————
+
+Estas anotações são apenas lembretes das aulas expostas em sala, durante a disciplina de Banco de dados.
+
+## ACESSO AO GITBOOK CELULAR
+
+—————————————————————————————————————————————
+
+#### <https://github.com/miguel7penteado/2026-1sem-ADS-BancoDeDados>
+
+[![Endereço do Site da Disciplina no GITHUB](01-aula01/media/02-endereco-site-disciplina.jpg){width="534"}](https://github.com/miguel7penteado/2026-1sem-ADS-PensamentoLogicoComputacional)
+
+## Leitores de formato de arquivo EPUB para SmartPhone
+
+—————————————————————————————————————————————
+
+### ANDROID
+
+#### **Moon+ Reader**
+
+[![Endereço app leitor Moon Reader Plus para ANDROID](01-aula01/media/03-endereco-moon-reader-plus.jpg)](https://play.google.com/store/apps/details?id=com.flyersoft.moonreader)
+
+## Livros Texto da Disciplina
+
+—————————————————————————————————————————————
+
+### ["Fundamentos matemáticos para a ciência da computação Matemática Discreta e Suas Aplicações" da autora "**Judith L. Gersting**"](https://www.kufunda.net/publicdocs/Fundamentos%20matem%C3%A1ticos%20para%20a%20ci%C3%AAncia%20da%20computa%C3%A7%C3%A3o%20Matem%C3%A1tica%20Discreta%20e%20Suas%20Aplica%C3%A7%C3%B5es%20(Judith%20L.%20Gersting).pdf)
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| [![Fundamentos matemáticos para a ciência da computação Matemática Discreta e Suas Aplicações](01-aula01/media/livro0-Judith_Gersting.jpg)](https://www.kufunda.net/publicdocs/Fundamentos%20matem%C3%A1ticos%20para%20a%20ci%C3%AAncia%20da%20computa%C3%A7%C3%A3o%20Matem%C3%A1tica%20Discreta%20e%20Suas%20Aplica%C3%A7%C3%B5es%20(Judith%20L.%20Gersting).pdf) | [![Fundamentos matemáticos para a ciência da computação Matemática Discreta e Suas Aplicações](01-aula01/media/livro-judith_Gersting.jpg)](https://www.kufunda.net/publicdocs/Fundamentos%20matem%C3%A1ticos%20para%20a%20ci%C3%AAncia%20da%20computa%C3%A7%C3%A3o%20Matem%C3%A1tica%20Discreta%20e%20Suas%20Aplica%C3%A7%C3%B5es%20(Judith%20L.%20Gersting).pdf) |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++-----------------------+---------------------------------------------------------------------------------+
+| **Autor(es)**         | ### [**Judith L. Gersting**](https://en.wikipedia.org/wiki/Christopher_J._Date) |
++-----------------------+---------------------------------------------------------------------------------+
+| **Editora**           | LTC                                                                             |
++-----------------------+---------------------------------------------------------------------------------+
+| **Idioma**            | Português                                                                       |
++-----------------------+---------------------------------------------------------------------------------+
+| **ISBN**              | 978-8521632597                                                                  |
++-----------------------+---------------------------------------------------------------------------------+
+| **Formato**           | Capa dura                                                                       |
++-----------------------+---------------------------------------------------------------------------------+
+| **Páginas**           | 749                                                                             |
++-----------------------+---------------------------------------------------------------------------------+
+| **Código Biblioteca** |                                                                                 |
++-----------------------+---------------------------------------------------------------------------------+
+
+
+
+## Calendário das aulas
+
+## Fevereiro de 2026
+
+—————————————————————————————————————————————
+
++------------+----------------+----------------+---------------------------------------------+
+| Data       | Dia da Semana  | Aulas          | Conteúdo                                    |
++============+================+================+=============================================+
+| 25/02/2026 | Quarta-Feira   | Aula 1         | Aula Inaugural                              |
++------------+----------------+----------------+---------------------------------------------+
+
+---
+
+## Março de 2026
+
+—————————————————————————————————————————————
+
++------------+----------------+----------+----------------------------------------------+
+| Data       | Dia da Semana  | Aulas    | Conteúdo                                     |
++============+================+==========+==============================================+
+| 04/03/2026 | Quarta-Feira   | Aula 2   | **Introdução à Lógica de Programação - 01** |
++------------+----------------+----------+----------------------------------------------+
+| 11/03/2026 | Quarta-Feira   | Aula 3   | **Estruturas de Controle - 02**              |
++------------+----------------+----------+----------------------------------------------+
+| 18/03/2026 | Quarta-Feira   | Aula 4   | **Tipos de Variáveis**                       |
++------------+----------------+----------+----------------------------------------------+
+| 25/03/2026 | Quarta-Feira   | Aula 5   | **Procedimentos e Funções**                  |
++------------+----------------+----------+----------------------------------------------+
+
+---
+
+## Abril de 2026
+
+—————————————————————————————————————————————
+
++------------+----------------+----------+----------------------------------------------+
+| Data       | Dia da Semana  | Aulas    | Conteúdo                                     |
++============+================+==========+==============================================+
+| 01/04/2026 | Quarta-Feira   | NP1      | **PROVA**                                    |
++------------+----------------+----------+----------------------------------------------+
+| 08/04/2026 | Quarta-Feira   | Aula 6   | **Listas e Dicionários**                     |
++------------+----------------+----------+----------------------------------------------+
+| 15/04/2026 | Quarta-Feira   | Aula 7   | **Entrada e Saída**                          |
++------------+----------------+----------+----------------------------------------------+
+| 22/04/2026 | Quarta-Feira   | Aula 8   | **Depuração e Teste de Algoritmos**          |
++------------+----------------+----------+----------------------------------------------+
+| 29/04/2026 | Quarta-Feira   | Aula 9   | **Programação Orientada a Objetos – Parte 1**|
++------------+----------------+----------+----------------------------------------------+
+
+---
+
+## Maio de 2026
+
+—————————————————————————————————————————————
+
++------------+----------------+----------+---------------------------------------------------+
+| Data       | Dia da Semana  | Aulas    | Conteúdo                                          |
++============+================+==========+===================================================+
+| 06/05/2026 | Quarta-Feira   | Aula 10  | **Programação Orientada a Objetos – Parte 2**     |
++------------+----------------+----------+---------------------------------------------------+
+| 13/05/2026 | Quarta-Feira   | Aula 11  | **Programação Orientada a Eventos – Parte 1**     |
++------------+----------------+----------+---------------------------------------------------+
+| 20/05/2026 | Quarta-Feira   | NP2      | **PROVA**                                         |
++------------+----------------+----------+---------------------------------------------------+
+| 27/05/2026 | Quarta-Feira   | SUB      | **PROVA SUBSTITUTIVA**                            |
++------------+----------------+----------+---------------------------------------------------+
+
+---
+
+## Junho de 2026
+
+—————————————————————————————————————————————
+
++------------+----------------+----------+----------------------------------------------+
+| Data       | Dia da Semana  | Aulas    | Conteúdo                                     |
++============+================+==========+==============================================+
+| 10/06/2026 | Quarta-Feira   | EXA      | **EXAME – PROVA SUBSTITUTIVA**                |
++------------+----------------+----------+----------------------------------------------+
+
+
+
+## Alunos 2026 - 1o Semestre
+
+—————————————————————————————————————————————
+
+### Campus Chácara Santo Antônio
+
+Nota técnica: fazendo servidor postgresql funcionar no windows, versão sem instalador:
+
+# Postgres (Zip Version) Windows Starting Guide
+
+Download postgresql from <https://www.enterprisedb.com/download-postgresql-binaries>;
+
+Unzip it;
+
+Open a cmd;
+
+Enter into the ‘bin’ directory;
+
+Init the database:
+
+``` powershell
+initdb.exe -D ../data –username=postgres –auth=trust
+```
+
+Start the database:
+
+``` powershell
+pg_ctl.exe start -D ../data
+```
+
+Open another cmd;
+
+Enter into the ‘bin’ directory;
+
+Log into the database:
+
+``` cmd
+psql.exe –username=postgres
+```
+
+Create a password for your user:
+
+``` sql
+ALTER USER postgres WITH PASSWORD ‘VeryVerySecret’;
+```
+
+Install adminpack extension:
+
+``` sql
+CREATE EXTENSION adminpack;
+```
+
+Reference: <https://feilerdev.wordpress.com/2017/12/05/installing-postgresql-on-windows-using-zip-archive-without-the-installer/>
+
+```{r indice, eval=FALSE, include=FALSE}
+rmarkdown::render("index.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
